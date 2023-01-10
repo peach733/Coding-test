@@ -1,0 +1,13 @@
+all_money = int(input())
+count_list = int(input())
+list_money = []
+
+for i in range(count_list):
+    money, count = input().split()
+    list_money.append(int(money) * int(count))
+
+if (all_money == sum(list_money)):
+    print('Yes')
+
+else:
+    print('No')
