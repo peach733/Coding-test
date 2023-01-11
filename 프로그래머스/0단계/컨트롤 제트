@@ -1,0 +1,18 @@
+def solution(s):
+    answer = 0
+
+    s = s.split()
+
+    if ("Z" not in s):
+        for i in s:
+            answer += int(i)
+
+    else:
+        for i in range(s.count("Z")):
+            s.remove(s[s.index("Z")-1])
+            s.remove("Z")
+
+        for i in s:
+            answer += int(i)
+
+    return answer
