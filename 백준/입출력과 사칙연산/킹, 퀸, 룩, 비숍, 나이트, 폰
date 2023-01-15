@@ -1,0 +1,9 @@
+have_list = list(map(int, input().split()))
+check_list = [1, 1, 2, 2, 2, 8]
+count_list = []
+
+for i in range(0, 6):
+    count_list.append(check_list[i] - have_list[i])
+
+for i in count_list:
+    print(i, end=" ")
