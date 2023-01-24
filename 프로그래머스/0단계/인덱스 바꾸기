@@ -1,0 +1,23 @@
+def solution(my_string, num1, num2):
+    answer = ''
+    
+    if (num1 < num2):
+        my_string2 = my_string.replace(my_string[num1], my_string[num2], 1)
+        my_string = list(my_string)
+        my_string2 = list(my_string2)
+        my_string2[num2] = my_string[num1]
+        print(my_string2)
+        
+        for i in my_string2:
+            answer += i
+
+    else:
+        my_string2 = my_string.replace(my_string[num2], my_string[num1])
+        my_string = list(my_string)
+        my_string2 = list(my_string2)
+        my_string2[num1] = my_string[num2]
+        
+        for i in my_string2:
+            answer += i
+
+    return answer
