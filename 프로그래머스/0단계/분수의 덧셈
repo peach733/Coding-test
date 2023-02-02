@@ -1,0 +1,16 @@
+def solution(denum1, num1, denum2, num2):
+    answer = []
+    denum_list = [denum1, denum2]
+    num_list = [num1, num2]
+
+    denum = denum_list[0] * num_list[1] + denum_list[1] * num_list[0]
+    num = num_list[0] * num_list[1]
+    answer.append(denum)
+    answer.append(num)
+
+    for i in range(min(answer), 1, -1):
+        if (answer[0] % i == 0 and answer[1] % i == 0):
+            answer[0] = answer[0] // i
+            answer[1] = answer[1] // i
+
+    return answer
