@@ -1,0 +1,21 @@
+def solution(quiz):
+    answer = []
+    for i in quiz:
+        calcul = list(map(str, i.split()))
+        
+        if (calcul[1] == '-'):
+            result = int(calcul[0]) - int(calcul[2])
+            
+            if (int(calcul[-1]) == result):
+                answer.append('O')
+            else:
+                answer.append('X')
+        else:
+            result = int(calcul[0]) + int(calcul[2])
+            
+            if (int(calcul[-1]) == result):
+                answer.append('O')
+            else:
+                answer.append('X')
+        
+    return answer
