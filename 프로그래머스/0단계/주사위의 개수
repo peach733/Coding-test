@@ -1,0 +1,11 @@
+def solution(box, n):
+    answer = []
+    result = 1
+    
+    for i in box:
+        answer.append(i//n)
+        
+    for i in answer:
+        result *= i
+        
+    return result
