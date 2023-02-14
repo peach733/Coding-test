@@ -1,0 +1,10 @@
+def solution(hp):
+    answer = []
+    ant = [5, 3, 1]
+    
+    for i in ant:
+        if (hp >= i):
+            answer.append(hp // i)
+            hp = hp % i
+    
+    return sum(answer)
