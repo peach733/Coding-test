@@ -1,0 +1,8 @@
+def solution(numbers):
+    answer = []
+    for i in numbers:
+        numbers.remove(i)
+        for j in numbers:
+            answer.append(i*j)
+
+    return max(answer)
