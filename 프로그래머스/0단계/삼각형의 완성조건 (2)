@@ -1,0 +1,13 @@
+def solution(sides):
+    answer = []
+    
+    for i in range(1, max(sides)):
+        if ((i + min(sides)) > max(sides)): 
+            answer.append(i)
+        
+    for i in range(max(sides), sum(sides)):
+        answer.append(i)
+        
+    answer = set(answer)
+    
+    return len(answer)
