@@ -1,0 +1,21 @@
+import itertools
+
+def solution(spell, dic):
+    list_count = list(itertools.permutations(spell, len(spell)))
+    answer = []
+    result_list = []
+    
+    for i in list_count:
+        result = ''
+        answer.append(result.join(i))
+        
+    for i in answer:
+        if (i not in dic):
+            result_list.append(False)
+        else:
+            result_list.append(True)
+            
+    if (result_list.count(True) >= 1):
+        return 1
+    else:
+        return 2
