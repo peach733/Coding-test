@@ -1,0 +1,33 @@
+def solution(polynomial):
+    answer = ''
+    list_poly = polynomial.split(' + ')
+    num_sum = 0
+    num_x = 0
+    
+    for i in list_poly:
+        if (i.isdigit() == True):
+            num_sum += int(i)
+        else:
+            num, x = i.split('x')
+            if (num == ''):
+                num = 1
+                num_x += num
+            else:
+                num_x += int(num)
+    
+    if (num_sum != 0):
+        if (num_x == 1):
+            answer += 'x' + ' + ' + str(num_sum)
+        elif (num_x != 1 and num_x > 1):
+            answer += str(num_x) + 'x' + ' + ' + str(num_sum)
+        else:
+            answer += str(num_sum)
+    else:
+        if (num_x != 1):
+            answer += str(num_x) + 'x'
+        elif (num_x == 1):
+            answer += 'x'
+        else:
+            answer += '0'
+    
+    return answer
