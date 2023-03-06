@@ -1,0 +1,20 @@
+n, m = map(int, input().split())
+basket_way = []
+result = ''
+
+for i in range(m):
+    basket_way.append(list(map(int, input().split())))
+
+basket = []
+
+for i in range(n):
+    basket.append(0)
+
+for i in basket_way:
+    for j in range(i[0] - 1, i[1]):
+        basket[j] = i[2]
+
+for _ in basket:
+    result += str(_) + ' '
+
+print(result)
