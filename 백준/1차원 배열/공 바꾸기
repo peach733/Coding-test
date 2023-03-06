@@ -1,0 +1,19 @@
+n, m = map(int, input().split())
+
+basket = []
+ways = []
+result = ''
+
+for i in range(n):
+    basket.append(i + 1)
+
+for i in range(m):
+    way1, way2 = (map(int, input().split()))
+    init_list = basket[way2 - 1]
+    basket[way2 - 1] = basket[way1 - 1]
+    basket[way1 - 1] = init_list
+
+for _ in basket:
+    result += str(_) + ' '
+
+print(result)
