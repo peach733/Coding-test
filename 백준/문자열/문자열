@@ -1,0 +1,16 @@
+count = int(input())
+
+result = []
+
+for i in range(count):
+    string = str(input())
+    if (len(string) == 1):
+        result.append(string*2)
+    elif (len(string) == 2):
+        result.append(string)
+    else:
+        r_index = string[0] + string[-1]
+        result.append(r_index)
+
+for _ in result:
+    print(_)
