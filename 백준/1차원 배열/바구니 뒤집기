@@ -1,0 +1,17 @@
+n, m = map(int, input().split())
+
+baskets = []
+result = ''
+
+for i in range(1, n + 1):
+    baskets.append(i)
+
+for i in range(m):
+    way1, way2 = map(int, input().split())
+    way1 -= 1
+    baskets[way1:way2] = reversed(baskets[way1:way2])
+
+for _ in baskets:
+    result += str(_) + ' '
+
+print(result)
