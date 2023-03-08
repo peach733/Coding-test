@@ -1,0 +1,16 @@
+check_string = input()
+check = []
+count = -1
+
+for i in range(len(check_string)):
+    if (check_string[i] == check_string[count]):
+        check.append(True)
+    else:
+        check.append(False)
+
+    count -= 1
+
+if (check.count(False) >= 1):
+    print(0)
+else:
+    print(1)
