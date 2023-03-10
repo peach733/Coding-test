@@ -1,0 +1,4 @@
+string = input()
+index_s = int(input())
+
+print(string[index_s - 1])
