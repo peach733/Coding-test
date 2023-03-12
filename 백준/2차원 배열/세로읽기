@@ -1,0 +1,15 @@
+string_alpha = []
+string_len = []
+result = ''
+
+for i in range(5):
+    string = input()
+    string_alpha.append(string)
+    string_len.append(len(string))
+
+for i in range(max(string_len)):
+    for j in range(5):
+        if (i < string_len[j]):
+            result += string_alpha[j][i]
+
+print(result)
