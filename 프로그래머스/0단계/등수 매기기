@@ -1,0 +1,19 @@
+def solution(score):
+    answer = []
+    result = []
+    
+    for i in score:
+        answer.append(sum(i)/len(i))
+        
+    score_dic = dict.fromkeys(answer, 0)
+    list_answer = sorted(answer, reverse = True)
+    
+    for i in list_answer:
+        score_dic[i] = list_answer.index(i) + 1
+    
+    for k in answer:
+        for i, j in score_dic.items():
+            if (i == k):
+                result.append(j)
+            
+    return result
