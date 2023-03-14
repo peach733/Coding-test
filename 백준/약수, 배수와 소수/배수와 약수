@@ -1,0 +1,18 @@
+while True:
+    n, m = input().split()
+    n = int(n)
+    m = int(m)
+
+    if (n == 0 and m == 0):
+        break
+
+    if (n > m):
+        if (n % m == 0):
+            print('multiple')
+        else:
+            print('neither')
+    else:
+        if (m % n == 0):
+            print('factor')
+        else:
+            print('neither')
