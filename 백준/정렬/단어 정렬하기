@@ -1,0 +1,11 @@
+n = int(input())
+string_list = []
+
+for i in range(n):
+    string_list.append(input())
+
+result_string = sorted(list(set(string_list)))
+result_string = sorted(result_string, key=len)
+
+for i in result_string:
+    print(i)
