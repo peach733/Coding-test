@@ -1,0 +1,8 @@
+n = input()
+
+result = ''
+
+for i in sorted(n, reverse=True):
+    result += str(i)
+
+print(result)
