@@ -1,0 +1,14 @@
+n = int(input())
+
+num_list = []
+
+for i in range(n):
+    num_list.append(list(map(int, input().split())))
+
+num_list = sorted(num_list)
+
+for i in num_list:
+    result = ''
+    for j in i:
+        result += str(j) + ' '
+    print(result)
