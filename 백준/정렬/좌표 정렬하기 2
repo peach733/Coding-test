@@ -1,0 +1,13 @@
+n = int(input())
+
+list_xy = []
+
+for i in range(n):
+    x, y = map(int, input().split())
+    list_xy.append([y, x])
+
+list_xy = sorted(list_xy)
+
+for i in list_xy:
+    result = str(i[1]) + ' ' + str(i[0])
+    print(result)
