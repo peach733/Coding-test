@@ -1,0 +1,42 @@
+import sys
+from collections import Counter
+
+n = int(input())
+
+list_num = []
+count_num = []
+
+for i in range(n):
+    list_num.append(int(sys.stdin.readline()))
+
+#산술평균
+print(round(sum(list_num)/n))
+
+#중앙값
+list_num = sorted(list_num)
+print(list_num[n // 2])
+
+#최빈값
+dic = dict()
+
+for i in list_num:
+    if i in dic:
+        dic[i] += 1
+    else:
+        dic[i] = 1
+        
+max_num = max(dic.values())
+
+max_dic = []
+
+for i in dic:
+    if max_num == dic[i]:
+        max_dic.append(i)
+
+if (len(max_dic) > 1):
+    print(max_dic[1])
+else:
+    print(max_dic[0])
+
+#범위
+print(list_num[1] - list_num[0])
