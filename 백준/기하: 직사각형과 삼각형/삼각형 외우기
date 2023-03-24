@@ -1,0 +1,21 @@
+a = int(input())
+b = int(input())
+c = int(input())
+
+angle_list = [a, b, c]
+
+angle_set = set(angle_list)
+sum_num = sum(angle_list)
+
+if (sum_num == 180):
+    if (len(angle_set) == 1):
+        print('Equilateral')
+
+    elif (len(angle_set) == 2):
+        print('Isosceles')
+
+    elif (len(angle_set) > 2):
+        print('Scalene')
+
+else:
+    print('Error')
