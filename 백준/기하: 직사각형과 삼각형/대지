@@ -1,0 +1,24 @@
+n = int(input())
+
+def dot(n):
+    x_list = []
+    y_list = []
+
+    if (n == 0):
+        return 0
+
+    for i in range(n):
+        a, b = map(int, input().split())
+        x_list.append(a)
+        y_list.append(b)
+    
+    max_x = max(x_list)
+    min_x = min(x_list)
+    max_y = max(y_list)
+    min_y = min(y_list)
+
+    answer = (max_x - min_x) * (max_y - min_y)
+
+    return answer
+
+print(dot(n))
