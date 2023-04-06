@@ -1,0 +1,7 @@
+def solution(numbers, k):
+    answer = numbers * k
+    
+    for i in range(k):
+        result = answer[::2]
+        
+    return result[k-1]
