@@ -1,0 +1,74 @@
+def solution(board):
+    answer = []
+    list_n = []
+    result = 0
+    size = len(board) * len(board[0])
+
+    for i in range(len(board)):
+        for j in range(len(board[i])):
+            if (board[i][j] == 1):
+                answer.append((i, j))
+                result += 1
+
+    for i in answer:
+        list_n.append(i)
+        if (i[0] == 0):
+            if (i[1] == 0):
+                list_n.append((i[0] + 1, i[1] + 1))
+                list_n.append((i[0] + 1, i[1]))
+                list_n.append((i[0], i[1] + 1))
+            elif (i[1] == (len(board) - 1)):
+                list_n.append((i[0] + 1, i[1]))
+                list_n.append((i[0], i[1] - 1))
+                list_n.append((i[0] + 1, i[1] - 1))
+            else:
+                list_n.append((i[0] + 1, i[1] + 1))
+                list_n.append((i[0] + 1, i[1]))
+                list_n.append((i[0], i[1] + 1))
+                list_n.append((i[0], i[1] - 1))
+                list_n.append((i[0] + 1, i[1] - 1))
+
+        elif (i[0] == (len(board) - 1)):
+            if (i[1] == 0):
+                list_n.append((i[0] - 1, i[1] + 1))
+                list_n.append((i[0] - 1, i[1]))
+                list_n.append((i[0], i[1] + 1))
+            elif (i[1] == (len(board) - 1)):
+                list_n.append((i[0] - 1, i[1]))
+                list_n.append((i[0], i[1] - 1))
+                list_n.append((i[0] - 1, i[1] - 1))
+            else:
+                list_n.append((i[0] - 1, i[1] + 1))
+                list_n.append((i[0] - 1, i[1]))
+                list_n.append((i[0], i[1] + 1))
+                list_n.append((i[0] - 1, i[1] - 1))
+                list_n.append((i[0], i[1] - 1))
+
+        else:
+            if (i[1] == 0):
+                list_n.append((i[0] - 1, i[1] + 1))
+                list_n.append((i[0] - 1, i[1]))
+                list_n.append((i[0] + 1, i[1]))
+                list_n.append((i[0], i[1] + 1))
+                list_n.append((i[0] + 1, i[1] + 1))
+            elif (i[1] == (len(board) - 1)):
+                list_n.append((i[0] - 1, i[1] - 1))
+                list_n.append((i[0] - 1, i[1]))
+                list_n.append((i[0] + 1, i[1]))
+                list_n.append((i[0], i[1] - 1))
+                list_n.append((i[0] + 1, i[1] - 1))
+            else:
+                list_n.append((i[0] - 1, i[1] - 1))
+                list_n.append((i[0], i[1] - 1))
+                list_n.append((i[0] + 1, i[1] - 1))
+                list_n.append((i[0] - 1, i[1]))
+                list_n.append((i[0] + 1, i[1]))
+                list_n.append((i[0], i[1] + 1))
+                list_n.append((i[0] + 1, i[1] + 1))
+                list_n.append((i[0] - 1, i[1] + 1))
+
+    if (result == size):
+        return 0
+    else:
+        print(sorted(set(list_n)))
+        return size - len(list(set(list_n)))
