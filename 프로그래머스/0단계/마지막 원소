@@ -1,0 +1,10 @@
+def solution(num_list):
+    last_num = num_list[-1]
+    last_num2 = num_list[-2]
+
+    if (last_num > last_num2):
+        num_list.append(last_num - last_num2)
+    else:
+        num_list.append(last_num * 2)
+
+    return num_list
