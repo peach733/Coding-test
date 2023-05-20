@@ -1,0 +1,8 @@
+def solution(a, b):
+    ab_number = str(a) + str(b)
+    ba_number = str(b) + str(a)
+    
+    if (ab_number >= ba_number):
+        return int(ab_number)
+    else:
+        return int(ba_number)
