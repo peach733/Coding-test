@@ -1,0 +1,12 @@
+def solution(myString, pat):
+    myString_replace = ''
+    for i in myString:
+        if (i == 'A'):
+            myString_replace += 'B'
+        else:
+            myString_replace += 'A'
+    
+    if (pat in myString_replace):
+        return 1
+    else:
+        return 0
