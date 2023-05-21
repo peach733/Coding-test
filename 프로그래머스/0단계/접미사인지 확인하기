@@ -1,0 +1,11 @@
+def solution(my_string, is_suffix):
+    string_list = [my_string]
+    
+    for i in my_string[:-1]:
+        my_string = my_string.replace(i, '', 1)
+        string_list.append(my_string)
+        
+    if (is_suffix in string_list):
+        return 1
+    else:
+        return 0
