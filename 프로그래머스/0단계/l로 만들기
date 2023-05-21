@@ -1,0 +1,9 @@
+def solution(myString):
+    # for i in myString:
+    #     if (ord(i) < ord('l')):
+    #         myString = myString.replace(i, 'l')
+    #     else:
+    #         continue
+    # return myString
+    
+    return myString.translate(str.maketrans('abcdefghijk', 'lllllllllll'))
