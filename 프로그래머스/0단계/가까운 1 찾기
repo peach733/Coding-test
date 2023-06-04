@@ -1,0 +1,8 @@
+def solution(arr, idx):
+    for i in range(0, idx):
+        arr[i] = 0
+        
+    if (1 not in arr):
+        return -1
+    else:
+        return arr.index(1)
