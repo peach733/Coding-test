@@ -1,0 +1,13 @@
+def solution(a, d, included):
+    answer = []
+    result = 0
+    
+    for i in range(len(included)):
+        answer.append(a)
+        a += d
+    
+    for i, j in zip(included, range(len(included))):
+        if (i == True):
+            result += answer[j]
+    
+    return result
