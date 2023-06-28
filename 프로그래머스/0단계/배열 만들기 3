@@ -1,0 +1,5 @@
+def solution(arr, intervals):
+    s1, s2 = intervals[0]
+    v1, v2 = intervals[1]
+    
+    return arr[s1:s2+1] + arr[v1:v2+1]
