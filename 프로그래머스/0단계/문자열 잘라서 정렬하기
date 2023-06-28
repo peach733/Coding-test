@@ -1,0 +1,5 @@
+def solution(myString):
+  myString = myString.replace('x', ' ')
+  answer = list(map(str, myString.split()))
+
+  return sorted(answer)
